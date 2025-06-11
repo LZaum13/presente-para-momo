@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma Surpresa Final</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <header>
+        <h1>Uma última coisinha...</h1>
+    </header>
+    <main>
+        <section>
+            <h2>EU TE AMO!</h2>
+            <p>Muito obrigado por ser essa namorada incrível que zela e luta pelo nosso relacionamento dia após dia, não tenho medo das fases ruins porque conheço a mulher extraordinaria que eu escolhi pra estar ao meu lado</p>
+        </section>
+        <section id="nosso-tempo">
+    <h2>Por isso que estamos juntos há:</h2>
+    <div id="cronometro">
+        <div class="tempo-bloco">
+            <span class="tempo-numero" id="dias">0</span>
+            <span class="tempo-label">Dias</span>
+        </div>
+        <div class="tempo-bloco">
+            <span class="tempo-numero" id="horas">0</span>
+            <span class="tempo-label">Horas</span>
+        </div>
+        <div class="tempo-bloco">
+            <span class="tempo-numero" id="minutos">0</span>
+            <span class="tempo-label">Minutos</span>
+        </div>
+        <div class="tempo-bloco">
+            <span class="tempo-numero" id="segundos">0</span>
+            <span class="tempo-label">Segundos</span>
+        </div>
+    </div>
+</section>  
+    </main>
+    <script>
+    // 1. Defina a data de início do namoro. 
+    // Formato: ANO-MÊS-DIA T HORA:MINUTO:SEGUNDO
+    // Usei a data que você mencionou: 02 de Setembro de 2023.
+    const dataInicio = new Date('2023-09-02T00:18:31');
+
+    // 2. Encontre os elementos no HTML onde vamos mostrar o tempo
+    const diasEl = document.getElementById('dias');
+    const horasEl = document.getElementById('horas');
+    const minutosEl = document.getElementById('minutos');
+    const segundosEl = document.getElementById('segundos');
+
+    // 3. Crie a função que atualiza o cronômetro
+    function atualizarCronometro() {
+        const agora = new Date();
+        const diferencaTotalSegundos = (agora - dataInicio) / 1000;
+
+        const dias = Math.floor(diferencaTotalSegundos / 3600 / 24);
+        const horas = Math.floor(diferencaTotalSegundos / 3600) % 24;
+        const minutos = Math.floor(diferencaTotalSegundos / 60) % 60;
+        const segundos = Math.floor(diferencaTotalSegundos) % 60;
+
+        // Atualiza os números na página
+        // O .padStart(2, '0') adiciona um zero à esquerda se o número for menor que 10 (ex: 07)
+        diasEl.textContent = dias;
+        horasEl.textContent = String(horas).padStart(2, '0');
+        minutosEl.textContent = String(minutos).padStart(2, '0');
+        segundosEl.textContent = String(segundos).padStart(2, '0');
+    }
+
+    // 4. Chame a função uma vez imediatamente (para não esperar 1s para aparecer)
+    atualizarCronometro();
+
+    // E depois, configure para que ela seja chamada a cada segundo (1000 milissegundos)
+    setInterval(atualizarCronometro, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+body {
+    font-family: sans-serif;
+    background-color: #fcefee; /* Um rosa bem clarinho */
+    color: #5d4037; /* Um tom de marrom escuro */
+    text-align: center;
+    margin: 0;
+    padding: 0px;
+    min-height: 100vh;
+}
+
+header, main, footer {
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+
+
+img {
+    border-radius: 10px; /* Deixa as bordas da imagem arredondadas */
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none; /* Tira as bolinhas da lista */
+    padding: 0;
+}
+/* Cole isso no seu arquivo style.css */
+
+#cronometro {
+    display: flex; /* Alinha os blocos um ao lado do outro */
+    justify-content: center; /* Centraliza os blocos na página */
+    gap: 20px; /* Cria um espaço entre os blocos */
+    margin-top: 20px;
+}
+
+.tempo-bloco {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 100px; /* Largura mínima para cada bloco */
+    text-align: center;
+}
+
+.tempo-numero {
+    display: block; /* Faz o número ocupar uma linha inteira */
+    font-size: 3rem; /* Tamanho grande para o número */
+    font-weight: bold;
+    color: #5d4037;
+}
+
+.tempo-label {
+    font-size: 1rem; /* Tamanho menor para o texto (Dias, Horas...) */
+    color: #5d4037;
+    opacity: 0.8;
+}
+/* =============================================== */
+/* ESTILOS RESPONSIVOS PARA O CRONÔMETRO (MOBILE)  */
+/* =============================================== */
+
+@media (max-width: 600px) {
+    /* Estilos que SÓ se aplicam em telas de até 600px de largura */
+
+    #cronometro {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .tempo-bloco {
+    /* 1. Definindo o formato de círculo */
+    width: 85px;  /* Largura fixa */
+    height: 85px; /* Altura igual à largura */
+    border-radius: 100%; /* Transforma o quadrado em círculo */
+
+    /* 2. A borda com destaque */
+    /* Usando um tom mais claro que o texto para destacar sem pesar */
+    border: 3px solid #8d6e63; 
+
+    /* 3. Centralizando o número e o texto DENTRO do círculo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Efeito extra: uma sombra suave para dar profundidade */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+    .tempo-numero {
+        font-size: 2.5rem; /* Reduz um pouco a fonte no mobile para não ficar tão grande */
+    }
+}

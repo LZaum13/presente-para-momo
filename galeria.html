@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Galeria</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+   <style>
+        .swiper {
+            width: 90%;
+            max-width: 700px;
+            height: 650px; 
+            margin-top: 15px; /* Aumentei um pouco a margem superior */
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 16px;
+            background: #ffffff00; /* Fundo branco para parecer um card */
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 18px; /* Bordas mais arredondadas */
+            padding: 20px; /* AUMENTADO: Mais espaço interno */
+            
+            
+            /* Importante para o padding funcionar bem com a altura/largura */
+            box-sizing: border-box; 
+        }
+        .swiper-slide img {
+            display: block;
+            width: 100%; /* Imagem ocupa a largura total da área com padding */
+            
+            /* A MUDANÇA PRINCIPAL ESTÁ AQUI */
+            max-height: 65%; /* Define uma ALTURA MÁXIMA, deixando espaço para o texto */
+            object-fit: contain; /* Garante que a imagem inteira apareça sem ser cortada */
+            
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .swiper-slide h3 {
+            margin-top: 1; /* Ajuda a empurrar o texto para baixo se houver espaço */
+            margin-bottom: 1px; /* Espaço menor entre título e parágrafo */
+            font-size: 26px;
+        }  
+
+        .swiper-slide p {
+            margin-top: 5px;
+            font-size: 22px; /* Fonte um pouco menor para caber melhor */
+            line-height: 1.4; /* Melhora a leitura se o texto tiver mais de uma linha */
+
+        }
+
+        /* Estilo do ícone da seta (sem alterações) */
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            color: #5d4037;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        /************************************
+        * ESTILOS DO SLIDE E BOTÃO FINAL
+        ************************************/
+
+        /* Estilo para o slide final ser um pouco diferente */
+        #slide-final {
+            background: #ffffff00; /* Fundo branco para destacar */
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
+            justify-content: center; /* Centraliza o conteúdo verticalmente */
+        }
+
+        /* Um contêiner para o texto e o botão */
+        #slide-final .conteudo-final {
+            padding: 20px;
+        }
+
+        /* Estilo do botão final */
+        .botao-final {
+            display: inline-block; /* Permite definir padding e margin */
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #5d4037; /* Cor marrom principal */
+            color: #fcefee; /* Cor rosa do fundo como cor do texto */
+            text-decoration: none; /* Tira o sublinhado do link */
+            font-weight: bold;
+            border-radius: 50px; /* Deixa o botão bem arredondado */
+            transition: transform 0.2s ease-in-out; /* Animação suave */
+        }
+
+        /* Efeito ao passar o mouse sobre o botão */
+        .botao-final:hover {
+            transform: scale(1.05); /* Aumenta um pouquinho o botão */
+            background-color: #4e342e; /* Um tom de marrom um pouco mais escuro */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nossos Meses Juntos</h1>
+        <p><a href="index.html">Volte para o começo benzinho</a></p>
+    </header>
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        
+        <div class="swiper-slide">
+            <img src="images/set 23.jpg" alt="Foto de Setembro de 2023">
+            <h3>Setembro de 2023</h3>
+            <p>O começo de tudo, onde nossa história começou!</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/out 23.jpg" alt="Foto de Outubro de 2023">
+            <h3>Outubro de 2023</h3>
+            <p>Cê lembra o tanto que eu te atrapalhei vc me pintando? uma das nossa melhores fotos!</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/nov 23.jpg" alt="Foto de Novembro de 2023">
+            <h3>Novembro de 2023</h3>
+            <p>O primeiro beijo, o tanto que eu pedi por esse dia ninguem faz ideia... (eu tbm soltei um pum na sua frente *sem querer* e não vem ao caso)</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/dez 23.jpg " alt="Foto de Dezembro de 2023">
+            <h3>Dezembro de 2023</h3>
+            <p>A primeira viagem juntos! Foi incrível!</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/jan 24.jpg" alt="Foto de Janeiro de 2024">
+            <h3>Janeiro de 2024</h3>
+            <p>A primeira virada! Primeira voltinha na nossa praia! (precisamos voltar lá)</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/fev 24.jpg" alt="Foto de Fevereiro de 2024">
+            <h3>Fevereiro de 2024</h3>
+            <p>Se eu te incomodei no dia da pintura, tu me incomodava 7x mais com esse balanço. Mas não vou mentir que sinto saudades</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/mar 24.jpg" alt="Foto de Março de 2024">
+            <h3>Março de 2024</h3>
+            <p>AVAI FUTEBOL CLUBE! amo seu sorriso nessa foto!😁</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/abr 24.jpg" alt="Foto de Abril de 2024">
+            <h3>Abril de 2024</h3>
+            <p>O primeiro aniversário como casal! e a 1ª vez que ce foi la em casa legalmente! find perfeito!!</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/mai 24.jpg" alt="Foto de Maio de 2024">
+            <h3>Maio de 2024</h3>
+            <p>NASCEU? kkkkk nossos rolezinhos no via são sempre especiais!</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/jun 24.jpg" alt="Foto de Junho de 2024">
+            <h3>Junho de 2024</h3>
+            <p>A primeira festa junina? tem também!</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/jul 24.jpg" alt="Foto de Julho de 2024">
+            <h3>Julho de 2024</h3>
+            <p>Depois de muito tempo sem se ver, ela aproveitou pra meter bala nos robos do vava</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/ago 24.jpg" alt="Foto de Agosto de 2024">
+            <h3>Agosto de 2024</h3>
+            <p>Seu mês!! desculpa não achei fotos do seu niver mas tinha essa maravilhosa de vc fazendo minha asa enquanto eu te incomodava muito</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/set 24.jpg" alt="Foto de Setembro de 2024">
+            <h3>Setembro de 2024</h3>
+            <p>Passeio no trapiche, iniciais na areia, muito névoa e sexo. (passei mt vergonha nesse dia, mas é importante)</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/out 24.jpg" alt="Foto de Outubro de 2024">
+            <h3>Outubro de 2024</h3>
+            <p>Esse casal esbanja estilo e alegria!</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/nov 24.jpg" alt="Foto de Novembro de 2024">
+            <h3>Novembro de 2024</h3>
+            <p>Piscinou amore? mais um mês firmes e fortes</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/dez 24.jpg" alt="Foto de Dezembro de 2024">
+            <h3>Dezembro de 2024</h3>
+            <p>Ixi! dezembrou babys, me formei e logo depois essa gatinha veio dormir comigo pela primeira vez!!</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/jan 25.jpg" alt="Foto de Janeiro de 2025">
+            <h3>Janeiro de 2025</h3>
+            <p>Virou!! Segunda virada e uma das melhores noites de nossas vidas (a mão na cara é pra esconder a sem-vergonhice que foi praticada instantes antes 🫣)</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/fev 25.jpg" alt="Foto de Fevereiro de 2025">
+            <h3>Fevereiro de 2025</h3>
+            <p>Não somos mocinhos! 🔞 Casal bom é aquele que se completa, e quando o assunto é loucura, a gente se passa. mas juntos, SEMPRE!</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/mar 25.jpg" alt="Foto de Março de 2025">
+            <h3>Março de 2025</h3>
+            <p>CAMPEÕES! 🏆 primeiro titulo (de muitos) ao seu lado, foi mais que especial, foi histórico</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/abr 25.jpg" alt="Foto de Abril de 2025">
+            <h3>Abril de 2025</h3>
+            <p>Eu to um ano mais velho e você continua sendo o meu motivo pra levantar todas as manhãs</p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/mai 25.jpg" alt="Foto de Maio de 2025">
+            <h3>Maio de 2025</h3>
+            <p>Cada dia mais maduros! (e loucos tbm 🫣) </p>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="images/jun 25.jpg" alt="Foto de Junho de 2025">
+            <h3>Junho de 2025</h3>
+            <p>Mais um! Segundo dia dos namorados ao seu lado e eu me orgulho muito de cada momento desses dai e tantos outro que não couberam aqui!</p>
+
+        </div>
+                <div class="swiper-slide" id="slide-final">
+                    <div class="conteudo-final">
+                        <h2>Eai meu bem? Gostou de relembrar um pouco da nossa jornada?</h2>
+                        <p>Faz tempo né? Que estamos juntos. Mas quanto tempo exatamente?</p>
+                        <a href="final.html" class="botao-final">Clique aqui</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.swiper', {
+        loop: false,
+        navigation: {
+          // O JavaScript agora vai encontrar as setas dentro do .carousel-container
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+</body>
+</html>
