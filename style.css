@@ -63,13 +63,13 @@ ul {
     #cronometro {
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        gap: 10px;
     }
 
     .tempo-bloco {
     /* 1. Definindo o formato de círculo */
-    width: 85px;  /* Largura fixa */
-    height: 85px; /* Altura igual à largura */
+    width: 75px;  /* Largura fixa */
+    height: 75px; /* Altura igual à largura */
     border-radius: 100%; /* Transforma o quadrado em círculo */
 
     /* 2. A borda com destaque */
